@@ -15,6 +15,7 @@ export default function AllNotes() {
   );
 
   const getNotes = () => {
+    console.log("first");
     AsyncStorageLib.getItem("NOTES").then((notes) => {
       {
         if (notes !== null) {

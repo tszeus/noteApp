@@ -13,9 +13,9 @@ export default function Note({ route }) {
   useFocusEffect(
     React.useCallback(() => {
       getNotes();
-      console.log(
-        notes.map((note) => `${note.date}\t${note.title}\t${note.note}`)
-      );
+      //   console.log(
+      //     notes.map((note) => `${note.date}\t${note.title}\t${note.note}`)
+      //   );
     }, [])
   );
 

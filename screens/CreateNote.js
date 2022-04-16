@@ -39,7 +39,7 @@ export default function CreateNote() {
     return num < 10 ? `0${num}` : `${num}`;
   };
   const getDate = () => {
-    return date.toJSON().substring(0, 10);
+    return date.toDateString();
   };
   const getTime = () => {
     return `Today  ${getNum(date.getHours())} : ${getNum(date.getMinutes())}`;
@@ -52,7 +52,6 @@ export default function CreateNote() {
         onChangeText={setTitle}
         style={styles.inputTitle}
         multiline={true}
-        autoFocus
         selectionColor="#222B45"
         placeholder="Type your title"
       />
@@ -70,7 +69,7 @@ export default function CreateNote() {
         style={styles.bottom}
       >
         <Button style={styles.button} appearance="filled" onPress={saveNote}>
-          CreateNote
+          Save Note
         </Button>
       </KeyboardAvoidingView>
     </View>
